@@ -1,0 +1,13 @@
+# Consistent source files on Windows, Linux and GitHub Actions.
+* text=auto eol=lf
+
+# Keep the copied working driver byte-for-byte for its recorded SHA-256 hashes.
+iot/smartbin_esp32/src/camera/*.h -text -whitespace
+iot/smartbin_esp32/src/camera/*.cpp -text -whitespace
+# Preserve earlier experiments without applying new formatting conventions.
+"iot dev/*.py" -whitespace
+
+*.jpg binary
+*.png binary
+*.zip binary
+*.rgb565 binary

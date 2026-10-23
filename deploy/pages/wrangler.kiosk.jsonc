@@ -1,0 +1,8 @@
+{
+  "name": "sime-loop-kiosk",
+  "pages_build_output_dir": "../../mobile/dist-kiosk",
+  "vars": {
+    "API_ORIGIN": "https://api.example.com"
+  },
+  "compatibility_date": "2026-10-23"
+}

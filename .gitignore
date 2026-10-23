@@ -1,0 +1,27 @@
+node_modules/
+.expo/
+dist/
+dist-native/
+dist-kiosk/
+.wrangler/
+.codex-remote-attachments/
+.impeccable/review/
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.pytest_tmp*/
+.test-run/
+.ruff_cache/
+*.pyc
+*.sqlite3*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+backend/data/
+artifacts/
+# Local camera experiments can contain incidental photos and repeated raw frames.
+iot dev/captures/
+iot/station.local.json

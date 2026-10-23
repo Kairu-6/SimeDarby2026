@@ -1,0 +1,24 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DEMO_MODE: "true"
+      DEVICE_API_KEY: "${DEVICE_API_KEY:-hackathon-device-key-change-me}"
+      CORS_ORIGINS: "${CORS_ORIGINS:-http://localhost:8081,http://127.0.0.1:8081}"
+    volumes:
+      - loop-data:/data
+      - loop-models:/models
+  web:
+    build:
+      context: ./mobile
+      args:
+        EXPO_PUBLIC_API_URL: "${EXPO_PUBLIC_API_URL:-http://localhost:8000}"
+    ports:
+      - "8081:80"
+    depends_on:
+      - api
+volumes:
+  loop-data:
+  loop-models:

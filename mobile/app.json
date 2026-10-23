@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Sime Loop",
+    "slug": "sime-loop",
+    "scheme": "simeloop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hackathon.simeloop"
+    },
+    "android": {
+      "package": "com.hackathon.simeloop",
+      "usesCleartextTraffic": true
+    },
+    "web": {
+      "name": "Sime Loop",
+      "bundler": "metro",
+      "output": "single",
+      "themeColor": "#D71920"
+    },
+    "plugins": [
+      "expo-notifications",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Scan a recycling station QR code with Sime Loop.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a waste photo to identify the right compartment.",
+          "cameraPermission": "Photograph an item to check how to sort it.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar",
+      "expo-font"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#305d80"/></marker></defs>
+<rect width="1400" height="1000" fill="#fff"/>
+<text x="40" y="45" font-family="Arial,sans-serif" font-size="28" fill="#222" font-weight="700">UART level divider and power distribution</text>
+<text x="40" y="76" font-family="Arial,sans-serif" font-size="16" fill="#5c6067" font-weight="400">Nano is 5 V logic; ESP32 GPIO is 3.3 V. The invoice's 1k and 2k resistors form the Nano-TX divider.</text>
+<text x="70" y="165" font-family="Arial,sans-serif" font-size="20" fill="#222" font-weight="700">Nano A0 / TX (5 V)</text>
+<text x="1010" y="165" font-family="Arial,sans-serif" font-size="20" fill="#222" font-weight="700">ESP32 GPIO16 / RX</text>
+<polyline points="90,205 340,205" fill="none" stroke="#305d80" stroke-width="3" stroke-linejoin="round"/>
+<rect x="340" y="190" width="110" height="30" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="350" y="180" font-family="Arial,sans-serif" font-size="16" fill="#222" font-weight="400">R1 = 1k</text>
+<polyline points="450,205 680,205 1260,205" fill="none" stroke="#305d80" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="680" cy="205" r="6" fill="#305d80"/>
+<polyline points="680,205 680,275" fill="none" stroke="#305d80" stroke-width="3" stroke-linejoin="round"/>
+<rect x="665" y="275" width="30" height="100" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="715" y="330" font-family="Arial,sans-serif" font-size="18" fill="#222" font-weight="400">R2 = 2k</text>
+<polyline points="680,375 680,425" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="650,425 710,425" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="660,436 700,436" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="670,447 690,447" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="715" y="425" font-family="Arial,sans-serif" font-size="16" fill="#222" font-weight="400">Common GND</text>
+<text x="770" y="275" font-family="Arial,sans-serif" font-size="17" fill="#222" font-weight="400">Node nominal voltage: 5 x 2 / (1 + 2) = 3.33 V</text>
+<text x="770" y="310" font-family="Arial,sans-serif" font-size="17" fill="#a52c22" font-weight="700">Do not connect Nano TX directly to ESP32 RX.</text>
+<text x="70" y="495" font-family="Arial,sans-serif" font-size="20" fill="#222" font-weight="700">ESP32 GPIO17 / TX (3.3 V)</text>
+<text x="1010" y="495" font-family="Arial,sans-serif" font-size="20" fill="#222" font-weight="700">Nano D12 / RX</text>
+<polyline points="90,530 1260,530" fill="none" stroke="#28794c" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="370" y="562" font-family="Arial,sans-serif" font-size="16" fill="#222" font-weight="400">Direct 3.3 V signal to the classic 5 V ATmega328P RX input</text>
+<rect x="45" y="615" width="610" height="180" rx="10" fill="#edf4f8" stroke="#9aa4ad"/>
+<text x="63" y="647" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Logic supply</text>
+<text x="63" y="676" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">ESP32 USB -&gt; onboard 3V3 -&gt; OV7670 module and HX711</text>
+<text x="63" y="699" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Nano USB / regulated 5 V logic -&gt; HC-SR04 VCC pins</text>
+<text x="63" y="722" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">D0/D1 remain free for Nano USB serial debugging</text>
+<text x="63" y="745" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Servo current must bypass Nano regulators and breadboard rails</text>
+<text x="63" y="768" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Never join independent USB and external positive supplies blindly</text>
+<rect x="735" y="615" width="610" height="180" rx="10" fill="#fff0e6" stroke="#9aa4ad"/>
+<text x="753" y="647" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Servo supply: separate high-current 5 V rail</text>
+<text x="753" y="676" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Regulated 5 V supply sized for all four servo peak currents</text>
+<text x="753" y="699" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Bench design target: 5 A; confirm the actual servo specifications</text>
+<text x="753" y="722" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">All servo V+ wires -&gt; this supply; not board 5V/3V3 outputs</text>
+<text x="753" y="745" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Bulk decoupling near servo rail; short adequate-gauge power leads</text>
+<text x="753" y="768" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">4xAA holder is not a regulated servo supply</text>
+<polyline points="90,875 1310,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="100,840 100,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="55" y="825" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">ESP32 GND</text>
+<polyline points="340,840 340,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="295" y="825" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">Nano GND</text>
+<polyline points="580,840 580,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="535" y="825" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">HX711/camera GND</text>
+<polyline points="860,840 860,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="815" y="825" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">HC-SR04 GND</text>
+<polyline points="1160,840 1160,875" fill="none" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+<text x="1115" y="825" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">Servo supply GND</text>
+<text x="450" y="920" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Common ground is the UART, sensor and servo signal reference.</text>
+<text x="45" y="966" font-family="Arial,sans-serif" font-size="15" fill="#a52c22" font-weight="400">Hardware reference only. Confirm module variants, camera byte order, servo travel/neutral and power ratings on the bench.</text>
+</svg>

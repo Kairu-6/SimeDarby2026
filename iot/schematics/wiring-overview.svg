@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#305d80"/></marker></defs>
+<rect width="1400" height="1000" fill="#fff"/>
+<text x="40" y="45" font-family="Arial,sans-serif" font-size="28" fill="#222" font-weight="700">Sime Loop: current SmartBin wiring</text>
+<text x="40" y="76" font-family="Arial,sans-serif" font-size="16" fill="#5c6067" font-weight="400">Matches the supplied firmware and Desktop/Arduino camera project. Bin 1=recyclable; bin 2=food; bin 3=reject.</text>
+<rect x="35" y="125" width="315" height="350" rx="10" fill="#eaf4ed" stroke="#9aa4ad"/>
+<text x="53" y="157" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">OV7670 parallel module</text>
+<text x="53" y="186" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Camera signal -&gt; ESP32 GPIO</text>
+<text x="53" y="209" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">D0 5      D1 18     D2 19     D3 21</text>
+<text x="53" y="232" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">D4 33     D5 32     D6 34     D7 35</text>
+<text x="53" y="255" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">XCLK 4     PCLK 22</text>
+<text x="53" y="278" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VSYNC 25   HREF 23</text>
+<text x="53" y="301" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">SIOD/SDA 26   SIOC/SCL 27</text>
+<text x="53" y="324" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VCC -&gt; 3V3; GND -&gt; GND</text>
+<text x="53" y="347" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">RESET -&gt; 3V3; PWDN -&gt; GND</text>
+<text x="53" y="370" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Short wires; check module pull-ups</text>
+<text x="53" y="393" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">QVGA 320 x 240 RGB565</text>
+<rect x="435" y="125" width="300" height="350" rx="10" fill="#edf4f8" stroke="#9aa4ad"/>
+<text x="453" y="157" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">ESP32 NodeMCU-32S</text>
+<text x="453" y="186" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Wi-Fi / camera / weight / API</text>
+<text x="453" y="209" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">UART2 TX: GPIO17</text>
+<text x="453" y="232" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">UART2 RX: GPIO16 (3.3 V)</text>
+<text x="453" y="255" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">HX711 DOUT: GPIO36 / VP</text>
+<text x="453" y="278" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">HX711 SCK: GPIO13</text>
+<text x="453" y="301" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Camera uses remaining mapped IO</text>
+<text x="453" y="324" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">ESP32 logic powered via USB</text>
+<text x="453" y="347" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">GPIO labels, not header numbers</text>
+<text x="453" y="370" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">No servo power from this board</text>
+<rect x="850" y="125" width="250" height="350" rx="10" fill="#fff0e6" stroke="#9aa4ad"/>
+<text x="868" y="157" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Nano V3 / ATmega328P</text>
+<text x="868" y="186" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">UART RX: D12 / TX: A0</text>
+<text x="868" y="209" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Food SG90: D9 (bin 2)</text>
+<text x="868" y="232" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Recycle SG90: D8 (bin 1)</text>
+<text x="868" y="255" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Reject SG90: D10 (bin 3)</text>
+<text x="868" y="278" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Pusher MG996R: D11</text>
+<text x="868" y="301" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">3 ultrasound pairs at right</text>
+<text x="868" y="324" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">9600 baud, 8N1, JSON lines</text>
+<text x="868" y="347" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">SoftwareSerial on D12 / A0</text>
+<text x="868" y="370" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">USB logic / external servo power</text>
+<polyline points="350,290 435,290" fill="none" stroke="#28794c" stroke-width="3" stroke-linejoin="round"/>
+<text x="354" y="276" font-family="Arial,sans-serif" font-size="12" fill="#222" font-weight="400">Camera bus</text>
+<polyline points="735,265 850,265" fill="none" stroke="#305d80" stroke-width="3" stroke-linejoin="round"/>
+<text x="742" y="248" font-family="Arial,sans-serif" font-size="13" fill="#222" font-weight="400">UART TX/RX</text>
+<text x="742" y="288" font-family="Arial,sans-serif" font-size="12" fill="#222" font-weight="400">See divider sheet</text>
+<rect x="1140" y="125" width="225" height="130" rx="10" fill="#f5f3e8" stroke="#9aa4ad"/>
+<text x="1158" y="157" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Food HC-SR04</text>
+<text x="1158" y="186" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">TRIG -&gt; D4; ECHO -&gt; D5</text>
+<text x="1158" y="209" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VCC -&gt; Nano 5V</text>
+<text x="1158" y="232" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">GND -&gt; common ground</text>
+<polyline points="1100,190 1120,190 1120,190 1140,190" fill="none" stroke="#8d7628" stroke-width="3" stroke-linejoin="round"/>
+<rect x="1140" y="275" width="225" height="130" rx="10" fill="#f5f3e8" stroke="#9aa4ad"/>
+<text x="1158" y="307" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Recycle HC-SR04</text>
+<text x="1158" y="336" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">TRIG -&gt; D2; ECHO -&gt; D3</text>
+<text x="1158" y="359" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VCC -&gt; Nano 5V</text>
+<text x="1158" y="382" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">GND -&gt; common ground</text>
+<polyline points="1100,340 1120,340 1120,340 1140,340" fill="none" stroke="#8d7628" stroke-width="3" stroke-linejoin="round"/>
+<rect x="1140" y="425" width="225" height="130" rx="10" fill="#f5f3e8" stroke="#9aa4ad"/>
+<text x="1158" y="457" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Reject HC-SR04</text>
+<text x="1158" y="486" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">TRIG -&gt; D6; ECHO -&gt; D7</text>
+<text x="1158" y="509" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VCC -&gt; Nano 5V</text>
+<text x="1158" y="532" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">GND -&gt; common ground</text>
+<polyline points="1100,450 1120,450 1120,490 1140,490" fill="none" stroke="#8d7628" stroke-width="3" stroke-linejoin="round"/>
+<rect x="35" y="535" width="315" height="200" rx="10" fill="#eaf4ed" stroke="#9aa4ad"/>
+<text x="53" y="567" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">HX711 amplifier module</text>
+<text x="53" y="596" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">VCC/VDD logic -&gt; ESP32 3V3</text>
+<text x="53" y="619" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">GND -&gt; common ground</text>
+<text x="53" y="642" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">DT / DOUT -&gt; GPIO36</text>
+<text x="53" y="665" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">SCK / CLK -&gt; GPIO13</text>
+<text x="53" y="688" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">E+ E- A+ A- -&gt; 5 kg load cell</text>
+<text x="53" y="711" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Single-VCC module: use 3.3 V</text>
+<polyline points="350,620 390,620 390,405 435,405" fill="none" stroke="#28794c" stroke-width="3" stroke-linejoin="round"/>
+<rect x="35" y="795" width="315" height="120" rx="10" fill="#f3f3f3" stroke="#9aa4ad"/>
+<text x="53" y="827" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">5 kg load cell + plate</text>
+<text x="53" y="856" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">One end fixed; plate on moving end</text>
+<text x="53" y="879" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Verify wire labels; tare empty plate</text>
+<polyline points="195,795 195,735" fill="none" stroke="#28794c" stroke-width="3" stroke-linejoin="round"/>
+<rect x="435" y="535" width="300" height="200" rx="10" fill="#edf4f8" stroke="#9aa4ad"/>
+<text x="453" y="567" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Computer / backend</text>
+<text x="453" y="596" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Python FastAPI + local CLIP</text>
+<text x="453" y="619" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">POST /telemetry</text>
+<text x="453" y="642" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">QR claim -&gt; check -&gt; sort receipt</text>
+<text x="453" y="665" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Food / recyclable / reject / hold</text>
+<text x="453" y="688" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Frozen item weight -&gt; points</text>
+<text x="453" y="711" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Reject receives zero points</text>
+<polyline points="585,475 585,535" fill="none" stroke="#305d80" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="600" y="510" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">Wi-Fi / HTTP</text>
+<rect x="850" y="620" width="515" height="130" rx="10" fill="#fff0e6" stroke="#9aa4ad"/>
+<text x="868" y="652" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">Three SG90 180-degree door servos</text>
+<text x="868" y="681" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Food D9; recyclable D8; reject D10</text>
+<text x="868" y="704" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Servo V+ -&gt; external regulated 5 V; GND -&gt; common</text>
+<text x="868" y="727" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Only the selected door opens; others commanded closed</text>
+<polyline points="965,475 965,620" fill="none" stroke="#d9752b" stroke-width="3" stroke-linejoin="round"/>
+<text x="980" y="580" font-family="Arial,sans-serif" font-size="14" fill="#222" font-weight="400">3 signal wires</text>
+<rect x="850" y="795" width="515" height="120" rx="10" fill="#fff0e6" stroke="#9aa4ad"/>
+<text x="868" y="827" font-family="Arial,sans-serif" font-size="19" fill="#222" font-weight="700">MG996R 360-degree continuous pusher</text>
+<text x="868" y="856" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Signal D11; V+ external 5 V; GND common</text>
+<text x="868" y="879" font-family="Arial,sans-serif" font-size="15" fill="#222" font-weight="400">Neutral/start pulses; stop when HX711 plate is empty</text>
+<polyline points="1080,475 1110,590 1380,590 1380,850 1365,850" fill="none" stroke="#d9752b" stroke-width="3" stroke-linejoin="round"/>
+<text x="40" y="960" font-family="Arial,sans-serif" font-size="16" fill="#a52c22" font-weight="400">Logic and servo positive rails stay separate; all grounds join. No end-stop or physical door-position feedback is present.</text>
+</svg>

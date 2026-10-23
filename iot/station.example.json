@@ -1,0 +1,8 @@
+{
+  "bin_id": "ELM-01",
+  "compartments": {
+    "food": { "empty_cm": 60, "full_cm": 8, "threshold_percent": 90 },
+    "recyclable": { "empty_cm": 60, "full_cm": 8, "threshold_percent": 90 },
+    "reject": { "empty_cm": 60, "full_cm": 8, "threshold_percent": 90 }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "sime-loop-app",
+  "pages_build_output_dir": "../../mobile/dist",
+  "vars": {
+    "API_ORIGIN": "https://api.example.com"
+  },
+  "compatibility_date": "2026-10-23"
+}

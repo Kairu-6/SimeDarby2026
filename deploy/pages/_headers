@@ -1,0 +1,8 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: geolocation=(), microphone=()
+  X-Frame-Options: DENY
+
+/index.html
+  Cache-Control: no-cache
